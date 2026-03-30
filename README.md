@@ -144,12 +144,24 @@
 <br><br><br>
 
 ## 📂 프로젝트 구조
+
 ```bash
 .
-├── README.md
-├── main.py
-├── problem.xlsx
-├── response_results.xlsx
-├── system prompt.txt
-├── add_rag함수 텍스트 문서.pdf
-└── req.txt
+├── README.md                      # 프로젝트 소개 및 문서
+├── main.py                        # 메인 실행 코드 (질문 처리, 프롬프트 생성, API 호출, 결과 저장)
+├── problem.xlsx                   # 대회 문제 데이터
+├── response_results.xlsx          # 모델 응답 및 결과 저장 파일
+├── system prompt.txt              # 시스템 프롬프트 초안
+├── add_rag함수 텍스트 문서.pdf     # add_rag 함수 설계 참고 자료
+└── req.txt                        # 실행에 필요한 패키지 목록
+```
+
+<br><br><br>
+
+## 🔧 개선 방향
+
+- 대회 전용 API 의존성을 제거하고, 일반적인 LLM API 환경에서도 재현 가능하도록 구조를 개선
+- 프롬프트를 역할 / 규칙 / 출력 형식 중심으로 재구성하여 더 안정적인 답변 유도
+- `add_rag` 문서를 긴 설명형 문맥이 아니라 정의형 / 비교형 / 혼동방지형 지식 블록으로 재정리
+- 오답 유형을 기준으로 문맥을 보강해 특정 문제 암기형이 아닌 일반화 가능한 성능 개선 방향으로 발전
+- 향후 데이터 로드, 프롬프트 생성, 응답 처리 로직을 분리하여 유지보수성과 실험 편의성을 높일 예정
