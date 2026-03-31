@@ -1,0 +1,106 @@
+2026-03-31 23:54:05 | INFO | 프로그램 시작
+2026-03-31 23:54:05 | INFO | 실행 모드: mock
+2026-03-31 23:54:10 | INFO | 입력 데이터 로드 완료 | rows=50
+2026-03-31 23:54:10 | INFO | mock 모드 활성화: 실제 API 클라이언트를 생성하지 않습니다.
+2026-03-31 23:54:10 | INFO | 질문 처리 시작 | id=1 | selected_topics=[] | block_count=0
+2026-03-31 23:54:10 | INFO | mock 응답 생성 완료 | id=1
+2026-03-31 23:54:10 | INFO | 질문 처리 시작 | id=2 | selected_topics=['gpt_basic_overview'] | block_count=1
+2026-03-31 23:54:10 | INFO | mock 응답 생성 완료 | id=2
+2026-03-31 23:54:10 | INFO | 질문 처리 시작 | id=3 | selected_topics=[] | block_count=0
+2026-03-31 23:54:10 | INFO | mock 응답 생성 완료 | id=3
+2026-03-31 23:54:10 | INFO | 질문 처리 시작 | id=4 | selected_topics=[] | block_count=0
+2026-03-31 23:54:10 | INFO | mock 응답 생성 완료 | id=4
+2026-03-31 23:54:10 | INFO | 질문 처리 시작 | id=5 | selected_topics=[] | block_count=0
+2026-03-31 23:54:10 | INFO | mock 응답 생성 완료 | id=5
+2026-03-31 23:54:10 | INFO | 질문 처리 시작 | id=6 | selected_topics=['gpt_basic_overview'] | block_count=1
+2026-03-31 23:54:10 | INFO | mock 응답 생성 완료 | id=6
+2026-03-31 23:54:10 | INFO | 질문 처리 시작 | id=7 | selected_topics=[] | block_count=0
+2026-03-31 23:54:10 | INFO | mock 응답 생성 완료 | id=7
+2026-03-31 23:54:10 | INFO | 질문 처리 시작 | id=8 | selected_topics=['satya_nadella_ai_growth'] | block_count=1
+2026-03-31 23:54:10 | INFO | mock 응답 생성 완료 | id=8
+2026-03-31 23:54:10 | INFO | 질문 처리 시작 | id=9 | selected_topics=[] | block_count=0
+2026-03-31 23:54:10 | INFO | mock 응답 생성 완료 | id=9
+2026-03-31 23:54:10 | INFO | 질문 처리 시작 | id=10 | selected_topics=['geoffrey_hinton_nobel'] | block_count=1
+2026-03-31 23:54:10 | INFO | mock 응답 생성 완료 | id=10
+2026-03-31 23:54:10 | INFO | 질문 처리 시작 | id=11 | selected_topics=['tokenizer_role'] | block_count=1
+2026-03-31 23:54:10 | INFO | mock 응답 생성 완료 | id=11
+2026-03-31 23:54:10 | INFO | 질문 처리 시작 | id=12 | selected_topics=[] | block_count=0
+2026-03-31 23:54:10 | INFO | mock 응답 생성 완료 | id=12
+2026-03-31 23:54:11 | INFO | 질문 처리 시작 | id=13 | selected_topics=['gpt_basic_overview', 'overfitting_definition'] | block_count=2
+2026-03-31 23:54:11 | INFO | mock 응답 생성 완료 | id=13
+2026-03-31 23:54:11 | INFO | 질문 처리 시작 | id=14 | selected_topics=[] | block_count=0
+2026-03-31 23:54:11 | INFO | mock 응답 생성 완료 | id=14
+2026-03-31 23:54:11 | INFO | 질문 처리 시작 | id=15 | selected_topics=['data_masking_use_cases'] | block_count=1
+2026-03-31 23:54:11 | INFO | mock 응답 생성 완료 | id=15
+2026-03-31 23:54:11 | INFO | 질문 처리 시작 | id=16 | selected_topics=['gpt_basic_overview'] | block_count=1
+2026-03-31 23:54:11 | INFO | mock 응답 생성 완료 | id=16
+2026-03-31 23:54:11 | INFO | 질문 처리 시작 | id=17 | selected_topics=['gpt_basic_overview'] | block_count=1
+2026-03-31 23:54:11 | INFO | mock 응답 생성 완료 | id=17
+2026-03-31 23:54:11 | INFO | 질문 처리 시작 | id=18 | selected_topics=['parameter_and_model_scale'] | block_count=1
+2026-03-31 23:54:11 | INFO | mock 응답 생성 완료 | id=18
+2026-03-31 23:54:11 | INFO | 질문 처리 시작 | id=19 | selected_topics=['gpt_basic_overview'] | block_count=1
+2026-03-31 23:54:12 | INFO | mock 응답 생성 완료 | id=19
+2026-03-31 23:54:12 | INFO | 질문 처리 시작 | id=20 | selected_topics=['gpt_basic_overview'] | block_count=1
+2026-03-31 23:54:12 | INFO | mock 응답 생성 완료 | id=20
+2026-03-31 23:54:12 | INFO | 질문 처리 시작 | id=21 | selected_topics=['gpt_basic_overview'] | block_count=1
+2026-03-31 23:54:12 | INFO | mock 응답 생성 완료 | id=21
+2026-03-31 23:54:12 | INFO | 질문 처리 시작 | id=22 | selected_topics=[] | block_count=0
+2026-03-31 23:54:12 | INFO | mock 응답 생성 완료 | id=22
+2026-03-31 23:54:12 | INFO | 질문 처리 시작 | id=23 | selected_topics=[] | block_count=0
+2026-03-31 23:54:12 | INFO | mock 응답 생성 완료 | id=23
+2026-03-31 23:54:12 | INFO | 질문 처리 시작 | id=24 | selected_topics=[] | block_count=0
+2026-03-31 23:54:12 | INFO | mock 응답 생성 완료 | id=24
+2026-03-31 23:54:12 | INFO | 질문 처리 시작 | id=25 | selected_topics=[] | block_count=0
+2026-03-31 23:54:13 | INFO | mock 응답 생성 완료 | id=25
+2026-03-31 23:54:13 | INFO | 질문 처리 시작 | id=26 | selected_topics=['tokenizer_role'] | block_count=1
+2026-03-31 23:54:13 | INFO | mock 응답 생성 완료 | id=26
+2026-03-31 23:54:13 | INFO | 질문 처리 시작 | id=27 | selected_topics=['tokenizer_role'] | block_count=1
+2026-03-31 23:54:13 | INFO | mock 응답 생성 완료 | id=27
+2026-03-31 23:54:13 | INFO | 질문 처리 시작 | id=28 | selected_topics=[] | block_count=0
+2026-03-31 23:54:13 | INFO | mock 응답 생성 완료 | id=28
+2026-03-31 23:54:13 | INFO | 질문 처리 시작 | id=29 | selected_topics=[] | block_count=0
+2026-03-31 23:54:13 | INFO | mock 응답 생성 완료 | id=29
+2026-03-31 23:54:13 | INFO | 질문 처리 시작 | id=30 | selected_topics=['gpt_basic_overview', 'parameter_and_model_scale'] | block_count=2
+2026-03-31 23:54:13 | INFO | mock 응답 생성 완료 | id=30
+2026-03-31 23:54:13 | INFO | 질문 처리 시작 | id=31 | selected_topics=[] | block_count=0
+2026-03-31 23:54:13 | INFO | mock 응답 생성 완료 | id=31
+2026-03-31 23:54:14 | INFO | 질문 처리 시작 | id=32 | selected_topics=[] | block_count=0
+2026-03-31 23:54:14 | INFO | mock 응답 생성 완료 | id=32
+2026-03-31 23:54:14 | INFO | 질문 처리 시작 | id=33 | selected_topics=[] | block_count=0
+2026-03-31 23:54:14 | INFO | mock 응답 생성 완료 | id=33
+2026-03-31 23:54:14 | INFO | 질문 처리 시작 | id=34 | selected_topics=[] | block_count=0
+2026-03-31 23:54:14 | INFO | mock 응답 생성 완료 | id=34
+2026-03-31 23:54:14 | INFO | 질문 처리 시작 | id=35 | selected_topics=[] | block_count=0
+2026-03-31 23:54:14 | INFO | mock 응답 생성 완료 | id=35
+2026-03-31 23:54:14 | INFO | 질문 처리 시작 | id=36 | selected_topics=[] | block_count=0
+2026-03-31 23:54:14 | INFO | mock 응답 생성 완료 | id=36
+2026-03-31 23:54:14 | INFO | 질문 처리 시작 | id=37 | selected_topics=[] | block_count=0
+2026-03-31 23:54:14 | INFO | mock 응답 생성 완료 | id=37
+2026-03-31 23:54:14 | INFO | 질문 처리 시작 | id=38 | selected_topics=[] | block_count=0
+2026-03-31 23:54:14 | INFO | mock 응답 생성 완료 | id=38
+2026-03-31 23:54:15 | INFO | 질문 처리 시작 | id=39 | selected_topics=[] | block_count=0
+2026-03-31 23:54:15 | INFO | mock 응답 생성 완료 | id=39
+2026-03-31 23:54:15 | INFO | 질문 처리 시작 | id=40 | selected_topics=[] | block_count=0
+2026-03-31 23:54:15 | INFO | mock 응답 생성 완료 | id=40
+2026-03-31 23:54:15 | INFO | 질문 처리 시작 | id=41 | selected_topics=['ai_agent_and_multimodal'] | block_count=1
+2026-03-31 23:54:15 | INFO | mock 응답 생성 완료 | id=41
+2026-03-31 23:54:15 | INFO | 질문 처리 시작 | id=42 | selected_topics=[] | block_count=0
+2026-03-31 23:54:15 | INFO | mock 응답 생성 완료 | id=42
+2026-03-31 23:54:15 | INFO | 질문 처리 시작 | id=43 | selected_topics=['ai_agent_and_multimodal'] | block_count=1
+2026-03-31 23:54:15 | INFO | mock 응답 생성 완료 | id=43
+2026-03-31 23:54:15 | INFO | 질문 처리 시작 | id=44 | selected_topics=['ai_agent_and_multimodal'] | block_count=1
+2026-03-31 23:54:16 | INFO | mock 응답 생성 완료 | id=44
+2026-03-31 23:54:16 | INFO | 질문 처리 시작 | id=45 | selected_topics=['ai_agent_and_multimodal'] | block_count=1
+2026-03-31 23:54:16 | INFO | mock 응답 생성 완료 | id=45
+2026-03-31 23:54:16 | INFO | 질문 처리 시작 | id=46 | selected_topics=['ai_agent_and_multimodal'] | block_count=1
+2026-03-31 23:54:16 | INFO | mock 응답 생성 완료 | id=46
+2026-03-31 23:54:16 | INFO | 질문 처리 시작 | id=47 | selected_topics=[] | block_count=0
+2026-03-31 23:54:16 | INFO | mock 응답 생성 완료 | id=47
+2026-03-31 23:54:16 | INFO | 질문 처리 시작 | id=48 | selected_topics=['ai_agent_and_multimodal'] | block_count=1
+2026-03-31 23:54:16 | INFO | mock 응답 생성 완료 | id=48
+2026-03-31 23:54:16 | INFO | 질문 처리 시작 | id=49 | selected_topics=['ai_agent_and_multimodal'] | block_count=1
+2026-03-31 23:54:16 | INFO | mock 응답 생성 완료 | id=49
+2026-03-31 23:54:16 | INFO | 질문 처리 시작 | id=50 | selected_topics=['ai_agent_and_multimodal'] | block_count=1
+2026-03-31 23:54:16 | INFO | mock 응답 생성 완료 | id=50
+2026-03-31 23:54:17 | INFO | 결과 저장 완료 | output=C:\Users\user\Desktop\olympiad-jbnu-prompt-engineering\response_results.xlsx
+2026-03-31 23:54:17 | INFO | 프로그램 종료

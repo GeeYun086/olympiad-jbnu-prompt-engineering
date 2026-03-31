@@ -22,6 +22,4 @@ def build_messages(question_id, question: str) -> tuple[list[dict], dict]:
 
 
 def build_debug_context(rag_info: dict) -> str:
-    if rag_info["combined_context"]:
-        return rag_info["combined_context"]
-    return ""
+    return rag_info.get("combined_context", "")

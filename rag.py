@@ -57,17 +57,17 @@ def format_block(block: Dict[str, Any]) -> str:
 
 def select_relevant_blocks(question: str) -> List[Dict[str, Any]]:
     blocks = load_knowledge_blocks()
-
     scored_blocks = []
+
     for block in blocks:
         score = score_block(question, block)
         if score >= MIN_RAG_SCORE:
-            scored_blocks.append((score, block))
+            block_copy = dict(block)
+            block_copy["match_score"] = score
+            scored_blocks.append(block_copy)
 
-    scored_blocks.sort(key=lambda x: x[0], reverse=True)
-
-    selected = [block for score, block in scored_blocks[:MAX_RAG_BLOCKS]]
-    return selected
+    scored_blocks.sort(key=lambda block: block["match_score"], reverse=True)
+    return scored_blocks[:MAX_RAG_BLOCKS]
 
 
 def combine_blocks(blocks: List[Dict[str, Any]]) -> str:
@@ -85,7 +85,11 @@ def get_relevant_rag_info(question: str) -> Dict[str, Any]:
     return {
         "selected_topics": [block.get("topic", "unknown") for block in selected_blocks],
         "block_count": len(selected_blocks),
-        "combined_context": combined_context
+        "combined_context": combined_context,
+        "match_scores": {
+            block.get("topic", "unknown"): block.get("match_score", 0)
+            for block in selected_blocks
+        }
     }
 
 
