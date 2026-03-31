@@ -1,0 +1,79 @@
+[
+  {
+    "topic": "power_automate",
+    "type": "definition",
+    "keywords": ["power automate", "마이크로소프트 자동화", "로우코드 자동화", "자동화 도구"],
+    "synonyms": ["microsoft power automate", "workflow 자동화", "업무 자동화"],
+    "content": "Microsoft Power Automate는 반복적으로 수행되는 수작업을 로우코드 기반으로 자동화할 수 있게 돕는 플랫폼이다. 드래그 앤 드롭 방식의 UI, 사전 정의 템플릿, AI Builder 등을 활용해 업무 생산성을 높일 수 있으며, Microsoft 365 환경에서 활용된다."
+  },
+  {
+    "topic": "satya_nadella_ai_growth",
+    "type": "trend",
+    "keywords": ["나델라", "무어의 법칙", "ai 발전 속도", "ignite 2024"],
+    "synonyms": ["satya nadella", "ms ignite", "ai scaling", "ai 성능 향상"],
+    "content": "사티아 나델라는 AI가 최근 매우 빠른 속도로 발전하고 있으며, 경험적으로 6개월마다 성능이 2배로 향상되는 것처럼 보인다고 언급했다. 다만 이는 물리 법칙이 아니라 경험적 관찰이며, 모델 아키텍처·데이터·시스템 혁신이 앞으로도 중요하다고 설명했다."
+  },
+  {
+    "topic": "ai_agent_and_multimodal",
+    "type": "trend",
+    "keywords": ["멀티모달", "ai 에이전트", "추론 능력", "풍부한 맥락"],
+    "synonyms": ["multimodal", "agent", "reasoning", "context"],
+    "content": "AI 발전의 핵심 동력으로는 멀티모달 인터페이스, 복잡한 문제 해결을 위한 추론 능력, 풍부한 맥락 이해와 도구 활용 능력이 제시되었다. 이런 요소들이 결합되면 AI 에이전트 중심의 활용이 확산될 수 있다."
+  },
+  {
+    "topic": "data_masking_use_cases",
+    "type": "use_case",
+    "keywords": ["데이터 마스킹", "masking", "마스킹 사용 사례", "privacy"],
+    "synonyms": ["data masking", "gdpr", "pii 보호", "민감정보 보호"],
+    "content": "데이터 마스킹은 민감정보를 보호하면서도 데이터를 활용할 수 있도록 값을 변형하는 기법이다. 주요 사용 사례는 보안 개발 및 테스트, 분석 및 연구, 외부 협업, 직원 교육이다. GDPR 등 데이터 프라이버시 규정 준수에도 도움이 된다."
+  },
+  {
+    "topic": "data_masking_types",
+    "type": "classification",
+    "keywords": ["정적 데이터 마스킹", "동적 데이터 마스킹", "결정론적 데이터 마스킹", "실시간 데이터 마스킹", "통계적 난독화"],
+    "synonyms": ["static masking", "dynamic masking", "deterministic masking", "real-time masking", "statistical obfuscation"],
+    "content": "데이터 마스킹의 대표 유형에는 정적 데이터 마스킹, 동적 데이터 마스킹, 결정론적 데이터 마스킹, 실시간 데이터 마스킹, 통계적 난독화가 있다. 정적 마스킹은 사전 규칙을 기반으로 데이터를 변환하고, 동적 마스킹은 사용자 권한에 따라 실시간으로 값을 가린다."
+  },
+  {
+    "topic": "geoffrey_hinton_nobel",
+    "type": "biography",
+    "keywords": ["제프리 힌튼", "힌튼", "노벨상", "노벨 물리학상", "역전파"],
+    "synonyms": ["geoffrey hinton", "backpropagation", "boltzmann machine", "hopfield"],
+    "content": "제프리 힌튼은 2024년 노벨 물리학상 수상자로 선정되었으며, 인공신경망을 이용한 머신러닝의 근간이 되는 발견과 발명에 기여한 공로를 인정받았다. 관련 설명에는 볼츠만 머신, 역전파 기반 딥러닝 발전 기여, 신경망 학습 방식 혁신 등이 포함된다."
+  },
+  {
+    "topic": "copilot_business_chat",
+    "type": "product",
+    "keywords": ["copilot", "비즈니스챗", "microsoft 365 copilot", "업무 생산성"],
+    "synonyms": ["business chat", "copilot for work", "m365 copilot"],
+    "content": "Microsoft Copilot은 비즈니스 데이터와 파일에 접근해 업무 생산성을 높이도록 돕는 AI 기반 도구로 설명된다. Teams, Word, Outlook 등과 연계해 요약, 워크플로 가속화, 데이터 탐색, 공동 작업 개선에 활용될 수 있다."
+  },
+  {
+    "topic": "tokenizer_role",
+    "type": "definition",
+    "keywords": ["토크나이저", "tokenizer", "토큰화", "subword", "oov"],
+    "synonyms": ["tokenization", "word tokenizer", "subword tokenizer"],
+    "content": "토크나이저는 입력 텍스트를 단어, 서브워드, 문장부호 등의 토큰으로 분절하고, 이를 모델이 처리할 수 있는 형태로 변환하는 역할을 한다. 서브워드 기반 토큰화는 OOV 문제를 줄이는 데 도움이 될 수 있다."
+  },
+  {
+    "topic": "gpt_basic_overview",
+    "type": "definition",
+    "keywords": ["gpt", "openai", "generative pre-trained transformer", "언어 모델"],
+    "synonyms": ["gpt 모델", "transformer", "text generation"],
+    "content": "GPT는 Generative Pre-trained Transformer의 약자로, 텍스트 생성과 이해에 활용되는 인공지능 기반 언어 모델 계열을 의미한다. 대표 특징으로는 텍스트 생성, 질의응답, 다양한 문맥 기반 언어 처리 능력이 있다."
+  },
+  {
+    "topic": "overfitting_definition",
+    "type": "definition",
+    "keywords": ["overfitting", "과적합", "일반화 성능", "훈련 데이터"],
+    "synonyms": ["오버피팅", "generalization", "과도한 학습"],
+    "content": "언어 모델의 과적합은 모델이 훈련 데이터에 지나치게 맞춰져 새로운 데이터에 대한 일반화 성능이 떨어지는 현상을 말한다. 훈련 데이터에서는 성능이 높아 보일 수 있지만, 새로운 입력에서는 부적절한 결과가 나올 수 있다."
+  },
+  {
+    "topic": "parameter_and_model_scale",
+    "type": "concept",
+    "keywords": ["파라미터", "parameter", "모델 크기", "표현력", "계산 비용"],
+    "synonyms": ["매개변수", "model capacity", "large model"],
+    "content": "신경망에서 파라미터 수가 많다는 것은 일반적으로 모델의 복잡성과 표현력이 높다는 뜻이다. 장점으로는 복잡한 패턴 학습과 정확도 향상이 있을 수 있지만, 단점으로는 과적합 위험, 계산 비용 증가, 더 많은 학습 데이터 필요 등이 있다."
+  }
+]

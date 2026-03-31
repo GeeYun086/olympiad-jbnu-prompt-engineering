@@ -1,6 +1,7 @@
 from openai import OpenAI
-from prompt_builder import build_messages
+
 from config import API_KEY, MODEL_NAME, TEMPERATURE, MAX_TOKENS, STREAM
+from prompt_builder import build_messages, build_debug_context
 
 
 def create_client(base_url: str) -> OpenAI:
@@ -15,7 +16,7 @@ def create_client(base_url: str) -> OpenAI:
 
 
 def solve_question(client: OpenAI, question_id, question: str) -> dict:
-    messages = build_messages(question_id=question_id, question=question)
+    messages, rag_info = build_messages(question_id=question_id, question=question)
 
     try:
         response = client.chat.completions.create(
@@ -33,11 +34,14 @@ def solve_question(client: OpenAI, question_id, question: str) -> dict:
         result = response_dict.get("result", {})
 
         print(f"\nID {question_id} 처리 완료")
+        print(f"선택된 RAG 토픽: {', '.join(rag_info['selected_topics']) if rag_info['selected_topics'] else '없음'}")
         print(f"응답: {result.get('response', '')}")
 
         return {
             "id": question_id,
             "question": question,
+            "selected_topics": ", ".join(rag_info["selected_topics"]),
+            "rag_block_count": rag_info["block_count"],
             "prompt": result.get("prompt", ""),
             "context": result.get("context", ""),
             "response": result.get("response", ""),
@@ -51,8 +55,10 @@ def solve_question(client: OpenAI, question_id, question: str) -> dict:
         return {
             "id": question_id,
             "question": question,
+            "selected_topics": ", ".join(rag_info["selected_topics"]),
+            "rag_block_count": rag_info["block_count"],
             "prompt": "",
-            "context": "",
+            "context": build_debug_context(rag_info),
             "response": "",
             "score": 0,
             "reasoning": f"ERROR: {str(e)}"
