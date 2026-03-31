@@ -1,15 +1,12 @@
 from data_loader import load_data
 from client import create_client, solve_question
 from result_writer import save_results
+from config import INPUT_FILE, OUTPUT_FILE, BASE_URL
 
 
 def main():
-    file_path = "./problem.xlsx"
-    base_url = "https://ryeon.elpai.org/submit/v1"
-    output_path = "response_results.xlsx"
-
-    data = load_data(file_path)
-    client = create_client(base_url=base_url)
+    data = load_data(INPUT_FILE)
+    client = create_client(base_url=BASE_URL)
 
     results = []
 
@@ -24,7 +21,7 @@ def main():
         )
         results.append(result)
 
-    save_results(results, output_path)
+    save_results(results, OUTPUT_FILE)
 
 
 if __name__ == "__main__":

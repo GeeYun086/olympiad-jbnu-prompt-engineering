@@ -1,14 +1,12 @@
 from openai import OpenAI
 from prompt_builder import build_messages
+from config import API_KEY, MODEL_NAME, TEMPERATURE, MAX_TOKENS, STREAM
 
 
 def create_client(base_url: str) -> OpenAI:
-    """
-    OpenAI 클라이언트를 생성, 기존 코드의 base_url, api_key, Content-Type 설정 유지
-    """
     client = OpenAI(
         base_url=base_url,
-        api_key="dummy-key",
+        api_key=API_KEY,
         default_headers={
             "Content-Type": "application/json"
         }
@@ -17,18 +15,15 @@ def create_client(base_url: str) -> OpenAI:
 
 
 def solve_question(client: OpenAI, question_id, question: str) -> dict:
-    """
-    단일 질문 처리 함수, 기존 process_with_openai 내부 로직을 한 문제 단위로 분리
-    """
     messages = build_messages(question_id=question_id, question=question)
 
     try:
         response = client.chat.completions.create(
-            model="olympiad",
+            model=MODEL_NAME,
             messages=messages,
-            temperature=0.7,
-            max_tokens=None,
-            stream=False,
+            temperature=TEMPERATURE,
+            max_tokens=MAX_TOKENS,
+            stream=STREAM,
             extra_headers={
                 "Question-ID": str(question_id)
             }
