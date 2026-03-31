@@ -161,6 +161,8 @@
 - 데이터 로드, 프롬프트 생성, 응답 처리, 결과 저장 로직을 분리하여 유지보수성 향상
 - 실행 로그 및 RAG 선택 메타데이터를 저장하도록 개선
 
+![실행 결과](./images/run_example.png)
+
 <br><br><br>
 
 ## 🚀 향후 추가 개선 방향
@@ -200,6 +202,7 @@ olympiad-jbnu-prompt-engineering/
 │   └── knowledge_blocks.json  # 지식 블록 기반 RAG 데이터
 ├── logs/
 │   └── app.log             # 실행 로그
+├── img/
 ├── problem.xlsx            # 입력 문제 데이터
 ├── response_results.xlsx   # 결과 저장 파일
 └── README.md
