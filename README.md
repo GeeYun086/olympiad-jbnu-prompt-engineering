@@ -22,7 +22,8 @@
 <br><br><br>
 
 ## 🗓️ 프로젝트 기간
-- 2024 전북대학교 동계 빅데이터 캠프 : 2024 2024.01.06 ~ 2024.01.09
+- 2024 전북대학교 동계 빅데이터 캠프 : 2024.01.06 ~ 2024.01.09
+- 코드 리팩토링 진행 (개인적으로 진행-정지윤) : 2026.03.30 ~ 2026.04.01
 
 <br><br><br>
 
@@ -37,7 +38,7 @@
 
 <br><br><br>
 
-## 🧪 개발 과정 및 성능 개선 전략
+## 🧪 대회 당시 개발 과정 및 성능 개선 전략
 
 ### 📊 전체 실험 요약
 
@@ -135,33 +136,71 @@
 
 <br><br><br>
 
+## 🔧 리팩토링 과정 및 결과 (2026.04.01 기준)
+
+| 단계 | 핵심 변경 | 기대 효과 |
+|------|----------|----------|
+| 1차 | 실행 흐름 분리 (`main.py` 책임 축소, 데이터 로드 / 프롬프트 생성 / API 호출 / 결과 저장 분리) | 가독성, 재사용성 향상 |
+| 2차 | 하드코딩 제거 및 설정 분리 (`config.py`, 시스템 프롬프트/RAG 외부화) | 유지보수성, 수정 편의성 향상 |
+| 3차 | 시스템 프롬프트 개선 + RAG 블록화 (`knowledge_blocks.json`, 점수 기반으로 관련 블록만 선택) | 불필요한 문맥 감소, 구조적 RAG 적용 |
+| 4차 | mock 모드 + 로깅 추가 (`USE_MOCK`, `logger.py`, 실행 메타데이터 저장) | 서버 없이도 실행/시연 가능, 디버깅 가능 |
+
+### 핵심 변화
+- 단일 스크립트 구조 → 모듈형 구조
+- 긴 문자열 기반 RAG → 선택형 Knowledge Block 기반 RAG
+- 대회 서버 의존 실행 → mock/API 이중 실행 구조
+- 단순 결과 저장 → 로그 및 실행 메타데이터 기반 추적 구조
+
+<br><br><br>
+
+## 🔍 리팩토링 후 개선된 사항
+
+- 대회 전용 API 의존 구조를 mock/API 이중 실행 구조로 개선
+- 프롬프트를 역할 / 규칙 / 출력 스타일 중심으로 재구성
+- 긴 설명형 context를 `knowledge_blocks.json` 기반의 선택형 RAG 구조로 변경
+- 데이터 로드, 프롬프트 생성, 응답 처리, 결과 저장 로직을 분리하여 유지보수성 향상
+- 실행 로그 및 RAG 선택 메타데이터를 저장하도록 개선
+
+<br><br><br>
+
+## 🚀 향후 추가 개선 방향
+
+- 키워드 매칭 기반 RAG 선택 로직을 더 정교한 유사도 기반 방식으로 개선
+- 실제 공개 API 환경에서 재실행 가능한 샘플 프로젝트로 확장
+- 간단한 테스트 코드 및 README 사용 예시 추가
+
+<br><br><br>
+
 ## 🛠️ 기술 스택
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI%20API-Compatible-412991?logo=openai&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI%20Compatible-412991?logo=openai&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-Knowledge%20Blocks-black?logo=json&logoColor=white)
+![Logging](https://img.shields.io/badge/Logging-Python-informational)
 
 <br><br><br>
 
 ## 📂 프로젝트 구조
 
 ```bash
-.
-├── README.md                      # 프로젝트 소개 및 문서
-├── main.py                        # 메인 실행 코드 (질문 처리, 프롬프트 생성, API 호출, 결과 저장)
-├── problem.xlsx                   # 대회 문제 데이터
-├── response_results.xlsx          # 모델 응답 및 결과 저장 파일
-├── system prompt.txt              # 시스템 프롬프트 초안
-├── add_rag함수 텍스트 문서.pdf     # add_rag 함수 설계 참고 자료
-└── req.txt                        # 실행에 필요한 패키지 목록
+olympiad-jbnu-prompt-engineering/
+├── main.py                 # 전체 실행 진입점
+├── config.py               # 경로, 모델, 실행 모드 등 설정 관리
+├── data_loader.py          # 문제 데이터 로드
+├── client.py               # API / mock 응답 처리
+├── prompt_builder.py       # 시스템 프롬프트 및 사용자 메시지 구성
+├── rag.py                  # RAG 블록 선택 및 문맥 결합
+├── result_writer.py        # 결과 저장
+├── logger.py               # 로깅 설정
+├── mock_response.py        # mock 응답 생성
+├── prompts/
+│   └── system_prompt.txt   # 시스템 프롬프트
+├── rag_data/
+│   └── knowledge_blocks.json  # 지식 블록 기반 RAG 데이터
+├── logs/
+│   └── app.log             # 실행 로그
+├── problem.xlsx            # 입력 문제 데이터
+├── response_results.xlsx   # 결과 저장 파일
+└── README.md
 ```
-
-<br><br><br>
-
-## 🔧 개선 방향
-
-- 대회 전용 API 의존성을 제거하고, 일반적인 LLM API 환경에서도 재현 가능하도록 구조를 개선
-- 프롬프트를 역할 / 규칙 / 출력 형식 중심으로 재구성하여 더 안정적인 답변 유도
-- `add_rag` 문서를 긴 설명형 문맥이 아니라 정의형 / 비교형 / 혼동방지형 지식 블록으로 재정리
-- 오답 유형을 기준으로 문맥을 보강해 특정 문제 암기형이 아닌 일반화 가능한 성능 개선 방향으로 발전
-- 향후 데이터 로드, 프롬프트 생성, 응답 처리 로직을 분리하여 유지보수성과 실험 편의성을 높일 예정
